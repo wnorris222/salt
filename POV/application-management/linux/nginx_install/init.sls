@@ -15,7 +15,7 @@ nginx_running:
 nginx_index_file:
   file.managed:
     - name: /var/www/html/index.html
-    - source: salt://Demo/appMgmt/linux/nginx_install/files/index.html.jinja
+    - source: salt://POV/application-management/linux/nginx_install/files/index.html.jinja
     - template: jinja
     - require:
       - install_nginx_package
