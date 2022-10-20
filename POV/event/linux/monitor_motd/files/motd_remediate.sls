@@ -2,4 +2,4 @@ revert-file:
   local.state.apply:
     - tgt: {{ data['id'] }}
     - arg:
-      - Demo.event.linux.monitor_motd.deploy_motd
+      - POV.event-driven-automation.linux.monitor_motd.deploy_motd

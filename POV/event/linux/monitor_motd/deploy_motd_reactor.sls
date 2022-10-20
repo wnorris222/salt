@@ -8,13 +8,13 @@
 configure_reactor.conf:
   file.managed:
     - name: /etc/salt/master.d/motd_reactor.conf
-    - source: salt://Demo/event/linux/monitor_motd/files/motd_reactor.conf
+    - source: salt://POV/event-driven-automation/linux/monitor_motd/files/motd_reactor.conf
     - makedirs: True
 
 configure_sshd_remediation:
   file.managed:
     - name: /srv/reactor/motd.sls
-    - source: salt://Demo/event/linux/monitor_motd/files/motd_remediate.sls
+    - source: salt://POV/event-driven-automation/linux/monitor_motd/files/motd_remediate.sls
     - makedirs: True
 
 restart_salt_master_service:

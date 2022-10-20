@@ -16,13 +16,13 @@ install_inotify_prerequsite:
 configure_motd:
   file.managed:
     - name: /etc/motd
-    - source: salt://Demo/event/linux/monitor_motd/files/motd_config
+    - source: salt://POV/event-driven-automation/linux/monitor_motd/files/motd_config
     - makedirs: True
 
 configure_beacon:
   file.managed:
     - name: /etc/salt/minion.d/motd_beacons.conf
-    - source: salt://Demo/event/linux/monitor_motd/files/Linux-beacons.conf
+    - source: salt://POV/event-driven-automation/linux/monitor_motd/files/Linux-beacons.conf
     - makedirs: True
 
 ##

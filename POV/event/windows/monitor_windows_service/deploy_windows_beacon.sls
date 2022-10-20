@@ -8,7 +8,7 @@
 configure_beacon:
   file.managed:
     - name: 'C:\ProgramData\Salt Project\Salt\conf\minion.d\beacons.conf'
-    - source: salt://Demo/event/windows/monitor_windows_service/files/windows_beacon.conf
+    - source: salt://POV/event/windows/monitor_windows_service/files/windows_beacon.conf
     - makedirs: True
 
 restart_salt-minion:
