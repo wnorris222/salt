@@ -1,0 +1,15 @@
+# require requisite ensures that the required states are executed before the state that requires it #
+# use package and ID name
+
+
+install_samba:
+  pkg.installed:
+    - name: samba-server
+
+
+check_samba_service:
+  service.running:
+    - name: smbd
+    - enable: True
+    - require:
+        - pkg: install_samba
