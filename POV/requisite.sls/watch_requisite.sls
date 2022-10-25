@@ -7,6 +7,7 @@
 
 
 # restart a service if changes are made to a configuration file
+# if no changes to install or copy states, still runs "mod_watch function" to see if the service is running, if not will start service
 
 install_redis:
   pkg.latest:

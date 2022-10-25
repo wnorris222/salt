@@ -12,12 +12,12 @@ check_samba_service:
     - name: smbd
     - enable: True
     - require:
-        - pkg: install_samba   # <-- Referenced by module:ID
+      - pkg: install_samba   # <-- Referenced by module:ID
 
     # or it could be 
     - require:
-        - pkg: samba-server    # <-- Referenced by module:name 
+      - pkg: samba-server    # <-- Referenced by module:name 
 
     # or it could be
     - require:
-        - install_samba        # <-- Reference by ID
+      - install_samba        # <-- Reference by ID
