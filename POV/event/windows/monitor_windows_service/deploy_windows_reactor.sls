@@ -1,7 +1,7 @@
 ##
-## POV/event-driven-automation/windows/monitor_windows_firewall/deploy_mpssvc_reactor.sls
 ## 
-##  This state delivers the reactor configuratoin and SLS response file to the Salt master, and 
+## 
+##  This state delivers the reactor configuration and SLS response file to the Salt master, and 
 ##  restarts the salt-master service
 ##
 
