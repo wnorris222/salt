@@ -1,0 +1,9 @@
+# This salt state opens port 445
+
+open_smb_port:
+  win_firewall.add_rule:
+    - name: SMB (445)
+    - localport: 445
+    - protocol: tcp
+    - action: allow
+
