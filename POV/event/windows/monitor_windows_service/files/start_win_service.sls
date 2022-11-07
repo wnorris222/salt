@@ -6,6 +6,8 @@
 ##
 
 {% set service_name = data['service_name'] %}
+
+{% if data[service_name]['running'] == false %}
 start {{ service_name }}:
   local.state.apply:
   - tgt: {{data['id']}}
@@ -15,3 +17,4 @@ start {{ service_name }}:
         server_name: {{ data['id'] }}
         service_name: {{ service_name }}
         service_running: {{ data[service_name]['running'] }}
+{% endif %}
