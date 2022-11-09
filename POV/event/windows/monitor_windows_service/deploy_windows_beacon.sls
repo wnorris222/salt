@@ -1,5 +1,5 @@
 ##
-## POV/event-driven-automation/windows/monitor_windows_firewall/deploy_windows_beacon.sls
+## POV/event-driven-automation/windows/monitor_windows_service/deploy_windows_beacon.sls
 ## 
 ##  This state copies the beacon configuration to the minion, and restarts the salt-minion service
 ##  and restarts the salt-minion service.
