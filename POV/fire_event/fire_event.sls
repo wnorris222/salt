@@ -5,3 +5,11 @@ nano installed:
   pkg.installed:
     - name: nano
     - fire_event: True
+
+
+# Or if you’d rather, you can replace True with a custom event string that will be appended to the event that is triggered:
+
+nano installed:
+  pkg.installed:
+    - name: nano
+    - fire_event: nano/installed
