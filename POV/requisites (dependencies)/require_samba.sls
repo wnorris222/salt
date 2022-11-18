@@ -1,6 +1,7 @@
-# require requisite ensures that the required states are executed before the state that requires it #
+# require requisite ensures that the required states are executed before the state that requires it
 # use package and ID name
 # or it could be 
+# can use: salt 'minion1' state.show_sls to see order states will execute
 
 install_samba:
   pkg.installed:
