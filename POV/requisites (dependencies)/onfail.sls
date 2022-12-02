@@ -15,3 +15,17 @@ backup_mount:
     - fstype: nfs
     - onfail:
       - mount: primary_mount
+
+# another example
+
+http_service:
+  service.running:
+    - name: http
+
+repot_failures:
+  module.run:
+    - name: slack_notify.call_hook
+    - kwargs:
+        message: Apache failed to start
+    - onfail:
+      - serfice: httpd_service
