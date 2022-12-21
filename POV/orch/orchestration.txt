@@ -1,0 +1,38 @@
+# File: base/orch/deploy-webapps
+Salt-run state.orchestrate orch.deploy-webapps
+
+# creating Orchestration State Files
+# The targeting type declared with tgt_type state parameter
+# Orchestration calls are mapped to Salt command interfaces:
+#### salt.function - calls remote execution modules on minions
+#### salt.state - Calls states/highstates on minions
+#### salt.runner - Call a Salt runner module executed on the master
+#### salt.wheel - Calls the Salt when interface for salt administration (manage keys
+
+
+
+# skeleton structure for salt.function
+
+id_declaration:
+  salt.function:
+    - name: exec_module.function
+    - tgt: '<your-targets>'
+    - tgt_type: 'type-of-targeting'
+
+# skeleton structure for salt.state
+
+id_declaration:
+  salt.state:
+    - tgt: '<your-targets>'
+    - tgt_type: 'type-of-targeting'
+    - sls:
+      - state1
+      - state2
+
+# skeleton structure for salt.runner
+
+id_declaration:
+  salt.runner:
+    - name: runner.function
+    - kwarg: value
+   

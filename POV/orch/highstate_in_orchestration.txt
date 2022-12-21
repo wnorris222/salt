@@ -1,0 +1,15 @@
+# File: base/orch/lamp-highstate.sls
+
+mysql_setup:
+  salt.state:
+    - tgt: 'db*'
+    - saltenv: base
+    - highstate: True
+
+webserver_setup:
+  salt.state:
+    - tgt: 'web*'
+    - saltenv: base
+    - highstate: True
+    - onchanges:
+      - salt: mysql_setup
