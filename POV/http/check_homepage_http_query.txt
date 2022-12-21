@@ -1,0 +1,5 @@
+check_homepage:
+  http.query:
+    - name: http://example.com
+    - match: 'Yellow, world'
+    - status: 200
