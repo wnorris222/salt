@@ -13,4 +13,3 @@ base:
     - python
   '*db*':
     - mysql
-    - drivers

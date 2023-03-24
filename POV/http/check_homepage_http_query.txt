@@ -3,3 +3,5 @@ check_homepage:
     - name: http://example.com
     - match: 'Yellow, world'
     - status: 200
+
+ 

@@ -1,0 +1,9 @@
+# watches state returns true, onchanges picks up
+Dockerbuild:
+  file.managed:
+    - name: /opt/app/Dockerfile
+    - source: salt://docker/files/Dockerfile
+  cmd.run:
+    - name: docker build /opt/app/Dockerfile
+    - onchanges:
+      - file: /opt/app/Dockerfile
